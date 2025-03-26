@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Container</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button class="search-btn">Search</button>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="scan()">Scanner</button>
+            <button onclick="contact()">Contact</button>
+            <button onclick="productCard()">Product Card</button>
+        </div>
+    </nav>
+    
+    <button class="btn" onclick="addContainer()">Add Product</button>
+    <div id="container-wrapper"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

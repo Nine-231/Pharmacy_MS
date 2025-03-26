@@ -1,0 +1,110 @@
+/* Fade-in animation for the page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 800px;
+    width: 1200px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Hover effect on container */
+.container:hover {
+    height: 820px;
+    width: 1220px;
+    transform: scale(1.02);
+}
+
+input {
+    width: 85%;
+    padding: 30px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 28px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: blue;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+    outline: none;
+    transform: scale(1.05);
+}
+
+button {
+    width: 87%;
+    padding: 30px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Button hover and click effects */
+button:hover {
+    background: darkblue;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#login {
+    margin-top: 3%;
+    font-size: 30px;
+}
+
+#register {
+    font-size: 45px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Slide-down effect for Register text */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shake animation for form submission */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}

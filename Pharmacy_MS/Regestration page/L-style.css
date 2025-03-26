@@ -1,0 +1,110 @@
+/* Fade-in animation for the page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 800px;
+    width: 900px;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+/* Hover effect on container */
+.container:hover {
+    transform: scale(1.02);
+}
+
+input {
+    width: 85%;
+    padding: 20px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: red;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+    outline: none;
+    transform: scale(1.05);
+}
+
+button {
+    width: 90%;
+    padding: 20px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 30px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 30px;
+}
+
+/* Button hover and click effects */
+button:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#register-link {
+    margin-top: 30%;
+    font-size: 22px;
+}
+
+#login-title {
+    font-size: 50px;
+    animation: slideDown 1s ease-in-out;
+}
+
+/* Slide-down effect for Login text */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shake animation for incorrect login */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
